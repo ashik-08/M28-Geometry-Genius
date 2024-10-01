@@ -70,6 +70,38 @@ function calculateParallelogramArea() {
   addToCalculationEntry("Parallelogram", parallelogramArea);
 }
 
+function calculateRhombusArea() {
+  const d1 = getInputValue("rhombus-diagonal1");
+  const d2 = getInputValue("rhombus-diagonal2");
+
+  // validate input
+  if (isNaN(d1) || isNaN(d2)) {
+    alert("Please insert a number");
+    return;
+  }
+
+  const rhombusArea = 0.5 * d1 * d2;
+  setElementInnerText("rhombus-area", rhombusArea);
+
+  addToCalculationEntry("Rhombus", rhombusArea);
+}
+
+function calculatePentagonArea() {
+  const perimeter = getInputValue("pentagon-perimeter");
+  const apothem = getInputValue("pentagon-apothem");
+
+  // validate input
+  if (isNaN(perimeter) || isNaN(apothem)) {
+    alert("Please insert a number");
+    return;
+  }
+
+  const pentagonArea = 0.5 * perimeter * apothem;
+  setElementInnerText("pentagon-area", pentagonArea);
+
+  addToCalculationEntry("Pentagon", pentagonArea);
+}
+
 function calculateEllipseArea() {
   const major = getInputValue("ellipse-semi-major");
   const minor = getInputValue("ellipse-semi-minor");
